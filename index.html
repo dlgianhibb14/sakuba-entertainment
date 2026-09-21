@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sakuba Entertainment — discover our Scratch game and send us your feedback.">
+  <title>@sakubaentertainment.com — Sakuba Entertainment</title>
+  <style>
+    :root{
+      --bg:#0b0b12; --panel:#141421; --panel2:#1b1b2b; --text:#f7f7fb;
+      --muted:#a9a9bd; --accent:#8b5cf6; --accent2:#ec4899; --border:#2b2b3e;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:radial-gradient(circle at 80% 0%,#25123b 0,transparent 35%),var(--bg);
+      color:var(--text);line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .nav{
+      position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);
+      background:rgba(11,11,18,.75);border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{max-width:1100px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:900;letter-spacing:-.5px}.brand span{color:#c084fc}
+    nav a{margin-left:22px;color:var(--muted);font-weight:700;font-size:.95rem}
+    nav a:hover{color:white}
+    .hero{max-width:1100px;margin:auto;padding:95px 22px 75px;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+    .pill{display:inline-block;padding:7px 12px;border:1px solid var(--border);border-radius:999px;color:#d8b4fe;background:rgba(139,92,246,.1);font-size:.85rem;font-weight:800}
+    h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.95;letter-spacing:-4px;margin:18px 0}
+    h1 .grad{background:linear-gradient(90deg,#c084fc,#f472b6);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{font-size:1.15rem;color:var(--muted);max-width:650px}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:13px 18px;border-radius:13px;font-weight:900;border:1px solid var(--border);display:inline-block}
+    .primary{background:linear-gradient(135deg,var(--accent),var(--accent2));border:none}
+    .secondary{background:var(--panel)}
+    .game-card{
+      background:linear-gradient(145deg,rgba(139,92,246,.22),rgba(236,72,153,.08));
+      border:1px solid var(--border);border-radius:28px;padding:14px;box-shadow:0 25px 70px rgba(0,0,0,.35)
+    }
+    .game-frame{aspect-ratio:4/3;border-radius:18px;overflow:hidden;background:#000}
+    .game-frame iframe{width:100%;height:100%;border:0}
+    section{max-width:1100px;margin:auto;padding:70px 22px}
+    .section-title{font-size:2.2rem;letter-spacing:-1.5px;margin:0 0 12px}
+    .section-sub{color:var(--muted);margin:0 0 30px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:20px;padding:24px}
+    .card h3{margin-top:0}.card p{color:var(--muted)}
+    .feedback{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
+    form{background:var(--panel);border:1px solid var(--border);border-radius:22px;padding:24px}
+    label{display:block;font-weight:800;margin:14px 0 7px}
+    input,textarea,select{
+      width:100%;padding:13px 14px;border-radius:12px;border:1px solid var(--border);
+      background:var(--panel2);color:white;font:inherit;outline:none
+    }
+    input:focus,textarea:focus,select:focus{border-color:#a78bfa}
+    textarea{min-height:150px;resize:vertical}
+    .submit{margin-top:18px;width:100%;cursor:pointer;background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;border:0}
+    .note{font-size:.85rem;color:var(--muted);margin-top:12px}
+    footer{border-top:1px solid var(--border);text-align:center;color:var(--muted);padding:30px 22px}
+    @media(max-width:800px){
+      .hero,.feedback{grid-template-columns:1fr}.cards{grid-template-columns:1fr}
+      nav a{margin-left:10px}.hero{padding-top:60px}h1{letter-spacing:-2px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#">@sakuba<span>entertainment.com</span></a>
+      <nav>
+        <a href="#game">Game</a>
+        <a href="#about">About</a>
+        <a href="#feedback">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <span class="pill">WELCOME TO SAKUBA ENTERTAINMENT</span>
+        <h1>Play. <span class="grad">Explore.</span> Have fun.</h1>
+        <p class="lead">
+          We're Sakuba Entertainment — a small creative game team sharing our projects
+          and building games for people to enjoy. Check out our game below and tell us what you think!
+        </p>
+        <div class="buttons">
+          <a class="btn primary" href="#game">Play the game ↓</a>
+          <a class="btn secondary" href="#feedback">Send feedback</a>
+        </div>
+      </div>
+
+      <div class="game-card">
+        <div class="game-frame">
+          <iframe
+            src="https://scratch.mit.edu/projects/1163527152/embed"
+            title="Sakuba Entertainment game"
+            allowtransparency="true"
+            scrolling="no"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="game">
+      <h2 class="section-title">Our game</h2>
+      <p class="section-sub">Jump in and try the project directly on the page.</p>
+      <div class="game-card">
+        <div class="game-frame">
+          <iframe
+            src="https://scratch.mit.edu/projects/1163527152/embed"
+            title="Sakuba Entertainment Scratch game"
+            allowtransparency="true"
+            scrolling="no"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Sakuba Entertainment</h2>
+      <p class="section-sub">A place for our games, ideas, and future projects.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>🎮 Our game</h3>
+          <p>Play our current project above and see what we've been working on.</p>
+        </div>
+        <div class="card">
+          <h3>✨ Creative projects</h3>
+          <p>We want to experiment with fun ideas, gameplay, characters, and stories.</p>
+        </div>
+        <div class="card">
+          <h3>💬 Your feedback</h3>
+          <p>Your comments can help us spot bugs, improve gameplay, and decide what to build next.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="feedback">
+      <div class="feedback">
+        <div>
+          <h2 class="section-title">Tell us what you think.</h2>
+          <p class="section-sub">
+            Found a bug? Have an idea? Tell us what you liked or what could be better.
+            Every bit of feedback helps.
+          </p>
+        </div>
+
+        <form id="feedbackForm">
+          <label for="name">Name (optional)</label>
+          <input id="name" name="name" placeholder="Your name">
+
+          <label for="rating">How was the game?</label>
+          <select id="rating" name="rating">
+            <option value="5">⭐️⭐️⭐️⭐️⭐️ Loved it</option>
+            <option value="4">⭐️⭐️⭐️⭐️ Really good</option>
+            <option value="3">⭐️⭐️⭐️ Pretty good</option>
+            <option value="2">⭐️⭐️ Needs work</option>
+            <option value="1">⭐️ Not for me</option>
+          </select>
+
+          <label for="message">Feedback</label>
+          <textarea id="message" name="message" required placeholder="Tell us what you think..."></textarea>
+
+          <button class="btn submit" type="submit">Send feedback</button>
+          <p class="note">
+            This version opens your email app to send the feedback. Replace the email address
+            in the script with your team's real feedback address.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Sakuba Entertainment · Made with ✦ for our players
+  </footer>
+
+  <script>
+    // CHANGE THIS to the email address where you want to receive feedback.
+    const FEEDBACK_EMAIL = "dlgianhibb14@gmail.com";
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    document.getElementById("feedbackForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim() || "Anonymous";
+      const rating = document.getElementById("rating").value;
+      const message = document.getElementById("message").value.trim();
+
+      if (!message) return;
+
+      const subject = encodeURIComponent("Sakuba Entertainment — Game Feedback");
+      const body = encodeURIComponent(
+        `Name: ${name}\nRating: ${rating}/5\n\nFeedback:\n${message}`
+      );
+
+      window.location.href = `mailto:${FEEDBACK_EMAIL}?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
